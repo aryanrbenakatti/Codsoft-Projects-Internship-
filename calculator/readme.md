@@ -21,4 +21,4 @@ This is a simple Python calculator program that allows users to perform basic ar
 4. Run the program by executing the following command:
 
    ```bash
-   python calculator.py
+   python index.py
