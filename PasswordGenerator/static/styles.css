@@ -1,0 +1,157 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #add8e6, #87cefa, #b0e0e6); /* Bluish gradient fading */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1500px; /* Add perspective for 3D effects */
+}
+
+/* Container Styling */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    transform-style: preserve-3d; /* Ensure 3D effect is preserved */
+    will-change: transform; /* Hint to browser that the element will be transformed */
+}
+
+/* 3D Hover Effect */
+.container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+    transform: translateZ(0); /* Make form elements stand out */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements inside the form */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input and Button Styling */
+input[type="number"], input[type="text"] {
+    width: 100%;
+    max-width: 250px; /* Limit input width */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Input Field Hover Effect */
+input[type="number"]:hover, input[type="text"]:hover {
+    transform: translateY(-3px); /* Lift input field when hovered */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+button {
+    padding: 12px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #0056b3;
+    transform: translateY(-3px); /* Lift button when hovered */
+}
+
+/* Result Area Styling */
+#result {
+    display: flex;
+    flex-direction: column; /* Stack the password and copy button vertically */
+    align-items: center; /* Center horizontally */
+    margin-top: 20px;
+}
+
+#password {
+    width: 70%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Copy Button Styling */
+#copyButton {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Add margin to create space between the password and the copy button */
+}
+
+/* Copy Button Hover Effect */
+#copyButton:hover {
+    background: #218838;
+}
+
+/* Message Area Styling */
+#message {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: color 0.3s;
+}
+
+/* Error Message Styling */
+#errorMessage {
+    color: red;
+}
+
+/* Add a glowing effect to the password */
+#password:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+    outline: none;
+}
+
+/* 3D effect for tilting the container based on cursor position */
+.container:hover {
+    transform: rotateY(10deg) rotateX(5deg); /* Add slight 3D rotation */
+}
+
+/* Cursor Follow Effect */
+.container {
+    transition: transform 0.1s ease-out;
+}
+
+/* Glow effect on password input field */
+#password:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+    outline: none;
+}
